@@ -37,6 +37,7 @@ PATH="$sandbox/rtems/5/bin:$PATH" make install
 
 cd "$sandbox"
 cd rtems-libbsd
+git checkout 13421d06177df03916665bb2f3a7fcadc51a951b
 git submodule init
 git submodule update rtems_waf
 ./waf configure --prefix="$sandbox/rtems/5" \
@@ -57,3 +58,4 @@ cd "$sandbox"
 cd ACE-TAO-RTEMS-installer
 ./ace-tao-rtems--install.sh
 
+echo "Run \"source setenv\" in ACE-TAO-RTEMS-installer"
